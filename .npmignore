@@ -1,0 +1,45 @@
+# Source files
+src/
+tests/
+examples/
+
+# Configuration
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+.eslintrc.json
+eslint.config.mjs
+
+# Development
+.git/
+.gitignore
+.cursor/
+*.log
+*.tsbuildinfo
+
+# Documentation (keep README.md)
+docs/
+CONTRIBUTING.md
+CHANGELOG.md
+product-idea.md
+PUBLISHING.md
+FINAL_SUMMARY.md
+
+# CI/CD
+.github/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+
+# Build artifacts (keep dist/)
+*.map
+
+# Environment
+.env
+.env*.local

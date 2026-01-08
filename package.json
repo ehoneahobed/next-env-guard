@@ -1,0 +1,100 @@
+{
+  "name": "next-env-guard",
+  "version": "0.0.1",
+  "description": "Type-safe and validated environment variable manager for Next.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./script": {
+      "import": "./dist/script/index.mjs",
+      "require": "./dist/script/index.js",
+      "types": "./dist/script/index.d.ts"
+    },
+    "./cli": {
+      "import": "./dist/cli/validate.mjs",
+      "require": "./dist/cli/validate.js",
+      "types": "./dist/cli/validate.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "bin": {
+    "next-env-guard-validate": "./dist/cli/validate.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src tests",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build && pnpm run test --run && pnpm run lint && pnpm run type-check"
+  },
+  "keywords": [
+    "nextjs",
+    "next.js",
+    "environment",
+    "variables",
+    "validation",
+    "typescript",
+    "zod",
+    "type-safe",
+    "runtime",
+    "env",
+    "config",
+    "next-env",
+    "env-validation",
+    "type-safe-env"
+  ],
+  "author": "ehoneahobed",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ehoneahobed/next-env-guard.git",
+    "directory": "."
+  },
+  "homepage": "https://github.com/ehoneahobed/next-env-guard#readme",
+  "bugs": {
+    "url": "https://github.com/ehoneahobed/next-env-guard/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/ehoneahobed"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "next": ">=12.0.0",
+    "react": ">=18.0.0",
+    "zod": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "typescript-eslint": "^7.0.0",
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
