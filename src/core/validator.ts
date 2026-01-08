@@ -113,6 +113,9 @@ export function validateEnv<T extends Record<string, ZodTypeAny>>(
  * @internal
  * This function is currently unused but kept for potential future use.
  * Consider removing if not needed.
+ * 
+ * Note: The 'z' import is intentionally kept for this function even though
+ * it's currently unused. If this function is removed, the import can be removed.
  */
 export function createZodObject<T extends Record<string, ZodTypeAny>>(
   schemas: T,
